@@ -6,7 +6,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "jsapp/template-blank-cordova-ad-project/sample.zip",
       "projectGuid": "05ef47bd-90ac-469c-81ee-55e7a58ea7df",
-      "lastModifiedDate": 1445696430729,
+      "lastModifiedDate": 1445701912248,
       "creationDate": 1445696425959
     },
     "XDK-app-designer": "true",
@@ -69,6 +69,50 @@
         "name": "Splashscreen",
         "description": "Cordova Splashscreen Plugin",
         "checksum": "170efb68"
+      },
+      {
+        "id": "com.msopentech.websql",
+        "name": "Web SQL plugin",
+        "version": "0.0.9",
+        "originType": "cordova.io",
+        "origin": "com.msopentech.websql",
+        "gitref": "",
+        "paramvals": {},
+        "sourceLocation": "plugins/com.msopentech.websql",
+        "selectedState": "Included",
+        "checksum": "6677ab1a",
+        "dependsOn": [],
+        "topLevel": true,
+        "permissions": {},
+        "description": "Web Sql Plugin for Apache Cordova",
+        "data": {},
+        "dependedBy": [
+          "cordova-plugin-indexedDB"
+        ],
+        "custom": "true"
+      },
+      {
+        "id": "cordova-plugin-indexedDB",
+        "name": "IndexedDB polyfill",
+        "version": "0.1.4",
+        "originType": "repo",
+        "origin": "https://github.com/MSOpenTech/cordova-plugin-indexedDB",
+        "gitref": "",
+        "subdir": ".",
+        "paramvals": {},
+        "sourceLocation": "plugins/cordova-plugin-indexedDB",
+        "selectedState": "Included",
+        "checksum": "62c6be27",
+        "dependsOn": [
+          "cordova-plugin-websql",
+          "com.msopentech.websql"
+        ],
+        "topLevel": true,
+        "permissions": {},
+        "description": "IndexedDB plugin for Apache Cordova",
+        "data": {},
+        "dependedBy": [],
+        "custom": "true"
       }
     ],
     "buildConfigurations": {
@@ -97,7 +141,7 @@
         "addlPermissions_": "",
         "excludedLibraries_": "",
         "cordovaCLIVersion_": "5.1.1",
-        "crosswalkVersion_": "14",
+        "crosswalkVersion_": "15",
         "appVersion_": "0.0.1",
         "appAuthor_": "Intel XDK",
         "appDescription_": "Template to develop a Cordova mobile web app using the App Designer UI editor.",
