@@ -9,6 +9,7 @@
         <link rel="stylesheet" type="text/css" href="ionic/css/ionic.min.css">
         <title>Blank App Designer Cordova Web App Project Template</title>
         <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <script src="http://debug-software.intel.com/target/target-script-min.js#1_I-Ml6r4MhV_jNiGelhFxK4qtO284eOCxiiq58qOek"></script>
 
         <!--
   * The "meta viewport" tag (below) helps your app size appropriately to a device's ideal viewport.
@@ -67,6 +68,7 @@
         <script type="application/javascript" src="lib/jquery.min.js"></script>
         <script type="application/javascript" src="xdk/ad/ionic_subpage.js"></script>
         <script type="application/javascript" src="js/index_user_scripts.js"></script>
+        <script type="application/javascript" src="js/index_uib_w_6_actionsheet.js"></script>
     </head>
 
     <body ng-app="myApp">
@@ -74,17 +76,23 @@
         <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
         <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work above -->
         <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
-        <div class="upage vertical-col left" id="mainpage">
-            <label class="item item-input widget uib_w_1 d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">CODIGO</span>
-                <input type="text" id="cod_pesso">
-            </label>
-            <label class="item item-input widget uib_w_2 d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">NOME</span>
-                <input type="text" id="nm_pesso">
-            </label>
-            <label class="item item-input widget uib_w_3 d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">APELIDO</span>
-                <input type="text" id="ape_pesso">
-            </label>
-            <button class="button widget uib_w_4 d-margins" data-uib="ionic/button" data-ver="0" id="salvar">Salvar</button>
+        <div class="upage" id="mainpage">
+            <div class="upage-outer">
+                <div class="upage-content ac0 content-area vertical-col left" id="page_47_8">
+                    <label class="item item-input widget uib_w_1 d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">CODIGO</span>
+                        <input type="text" id="cod_pesso">
+                    </label>
+                    <label class="item item-input widget uib_w_2 d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">NOME</span>
+                        <input type="text" id="nm_pesso">
+                    </label>
+                    <label class="item item-input widget uib_w_3 d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">APELIDO</span>
+                        <input type="text" id="ape_pesso">
+                    </label>
+                    <button class="button widget uib_w_4 d-margins" data-uib="ionic/button" data-ver="0" id="salvar">Salvar</button>
+                    <button class="button widget uib_w_4 d-margins" data-uib="ionic/button" data-ver="0" id="listar">Listar</button>
+                    <ion-list class="widget uib_w_7 d-margins" data-uib="ionic/list" data-ver="0" id="listaPessoa"></ion-list>
+                </div>
+            </div>
 
         </div>
     </body>

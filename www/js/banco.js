@@ -13,7 +13,7 @@ request.onupgradeneeded = function(){
 
         var pessoa = db.createObjectStore("tbl_PESSOAS", {autoIncrement : true});
 
-    pessoa.createIndex("COD_IDENT_PESSO", "COD_IDENT_PESSO", {unique: true});
+    pessoa.createIndex("COD_IDENT_PESSO", "COD_IDENT_PESSO", {unique: false});
     pessoa.createIndex("TXT_NOMEX_PESSO", "TXT_NOMEX_PESSO", {unique: false});
     pessoa.createIndex("TXT_APELI_PESSO", "TXT_APELI_PESSO", {unique: false});
     
@@ -34,4 +34,14 @@ request.onsuccess = function(){
 
 request.onerror = function(event){
     console.log("Error " + event.target.errorCode);
+}
+
+function DeletaBanco(){    
+    var bdDeleta = indexedDB.deleteDatabase("DB_CRUDMobile");
+    bdDeleta.onerror = function(event) {
+        console.log("Error " + event.target.errorCode);
+    };
+    bdDeleta.onsuccess = function(event) {
+        console.log("Deletado com sucesso!");
+    };
 }
