@@ -360,6 +360,6 @@
     "testDirectory": "test"
   },
   "editorTab": {
-    "showLiveDevelopmentTasksPanel": true
+    "showLiveDevelopmentTasksPanel": false
   }
 }

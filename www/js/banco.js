@@ -4,14 +4,15 @@ if(!window.indexedDB)
   console.log("Seu navegador não suporta o recurso IndexedDB");
 }
 
+//DeletaBanco();
+
 var request = indexedDB.open("DB_CRUDMobile", 1);
 var db = null;
-
 
 request.onupgradeneeded = function(){
     db = request.result;
 
-        var pessoa = db.createObjectStore("tbl_PESSOAS", {autoIncrement : true});
+        var pessoa = db.createObjectStore("tbl_PESSOAS", {keyPath : "COD_IDENT_PESSO"});
 
     pessoa.createIndex("COD_IDENT_PESSO", "COD_IDENT_PESSO", {unique: false});
     pessoa.createIndex("TXT_NOMEX_PESSO", "TXT_NOMEX_PESSO", {unique: false});
